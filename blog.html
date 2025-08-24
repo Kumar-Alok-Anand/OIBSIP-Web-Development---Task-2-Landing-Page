@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Alok's Portfolio</title>
+  <link rel="stylesheet" href="blog.css" />
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="nav-left">
+      <!-- Clickable profile image -->
+      <img src="alok_image.jpg" alt="Alok Photo" class="nav-profile-img"
+           onclick="document.getElementById('img-modal').style.display='flex'" />
+      <span class="nav-name">Alok Kumar</span>
+    </div>
+    <div class="nav-buttons">
+      <a href="#services" class="nav-btn">Services</a>
+      <a href="#works" class="nav-btn">Works</a>
+      <a href="#blog" class="nav-btn">Blog</a>
+    </div>
+  </nav>
+
+  <!-- Image Modal -->
+  <div class="img-modal" id="img-modal">
+    <img src="alok_image.jpg" alt="Full Image" class="modal-img" />
+  </div>
+
+  <!-- Header -->
+  <header>
+    <div class="header-container">
+      <h1>Hello, I'm Alok Kumar</h1>
+      <p>Web Developer | Front-End Enthusiast</p>
+    </div>
+  </header>
+
+  <!-- Services Section -->
+  <section id="services" class="about">
+    <h2>Services</h2>
+    <p>
+      As a passionate web developer, I offer a range of services tailored to help you build your online presence:
+    </p>
+    <ul class="services-list">
+      <li><strong>Custom Portfolio Websites:</strong> Showcase your work and skills with a professional, clean, and responsive portfolio tailored to your style.</li>
+      <li><strong>Landing Pages:</strong> Create captivating landing pages designed to convert visitors into customers using modern design principles.</li>
+      <li><strong>Responsive Web Design:</strong> Ensure your site looks perfect on all devices — from mobile phones to large desktops.</li>
+      <li><strong>Website Maintenance:</strong> Keep your website up to date, secure, and running smoothly with ongoing support and updates.</li>
+      <li><strong>UI/UX Enhancements:</strong> Improve user experience with intuitive navigation, fast loading, and engaging interfaces.</li>
+    </ul>
+    <p>
+      Whether you're a startup, freelancer, or business, I'm here to transform your ideas into functional and beautiful websites that truly represent your brand.
+    </p>
+  </section>
+
+  <!-- Works Section -->
+  <section id="works" class="projects">
+    <h2>My Works</h2>
+    <div class="project-list">
+      <div class="project-card">
+        <h3>Portfolio Website</h3>
+        <p>A simple responsive website built using HTML & CSS.</p>
+      </div>
+      <div class="project-card">
+        <h3>Landing Page</h3>
+        <p>Clean landing page design for a fictional product.</p>
+      </div>
+      <div class="project-card">
+        <h3>YouTube Clone</h3>
+        <p>A functional front-end replica of YouTube with video thumbnails and search bar.</p>
+      </div>
+      <div class="project-card">
+        <h3>Netflix Clone</h3>
+        <p>A visually appealing Netflix UI clone showcasing movie thumbnails and categories.</p>
+      </div>
+      <div class="project-card">
+        <h3>Spotify Clone</h3>
+        <p>A music player UI clone that mimics Spotify’s interface using HTML, CSS, and JavaScript.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog Section -->
+  <section id="blog" class="blog-section">
+    <h2>Blog</h2>
+    <div class="blog-slider">
+      
+      <!-- Blog 1 -->
+      <div class="blog-card">
+        <h3>My Web Development Experience</h3>
+        <p class="preview">How I started and what I learned so far...</p>
+        <div class="full-blog">
+          <p>
+            I began my journey into web development with basic HTML and CSS. Initially, I struggled with layout and styling,
+            but after building a few small projects, everything started making sense. Creating this portfolio is one of my proudest
+            achievements so far. I’m currently diving into JavaScript and exploring responsive design to build more dynamic websites.
+          </p>
+        </div>
+      </div>
+
+      <!-- Blog 2 -->
+      <div class="blog-card">
+        <h3>About Web Development</h3>
+        <p class="preview">Why web development is more than just code...</p>
+        <div class="full-blog">
+          <p>
+            Web development is not just about writing code; it's about solving problems, creating intuitive user experiences, and
+            constantly learning new technologies. From structuring HTML to styling with CSS and bringing interactivity with JavaScript,
+            it's a field that encourages creativity and logic together. It's exciting to see how the web shapes the world we live in.
+          </p>
+        </div>
+      </div>
+
+      <!-- Blog 3 -->
+      <div class="blog-card">
+        <h3>Future of Web Development</h3>
+        <p class="preview">Where the industry is heading...</p>
+        <div class="full-blog">
+          <p>
+            The future of web development lies in automation, AI integration, and performance-focused designs. Technologies like
+            WebAssembly, serverless architectures, and AI-powered code tools are revolutionizing the way developers work. Accessibility,
+            speed, and mobile-first design will remain key as we move toward a smarter and more user-centric web.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <h2>Contact Me</h2>
+    <p>Email: kumaralokanand8@gmail.com</p>
+    <p>LinkedIn: <a href="https://linkedin.com/in/alok-kumar-9467312a0" target="_blank" rel="noopener">linkedin.com/in/alok-kumar-9467312a0</a></p>
+    <p>GitHub: <a href="https://github.com/Kumar-Alok-Anand" target="_blank" rel="noopener">github.com/Kumar-Alok-Anand</a></p>
+  </footer>
+
+  <!-- Zoom script -->
+  <script>
+    const modal = document.getElementById('img-modal');
+    const modalImg = modal.querySelector('.modal-img');
+    let scale = 1;
+    const minScale = 1;
+    const maxScale = 3;
+
+    // Zoom image on mouse wheel
+    modalImg.addEventListener('wheel', function(e) {
+      e.preventDefault();
+      if (e.deltaY < 0) {
+        scale += 0.1;
+        if (scale > maxScale) scale = maxScale;
+      } else {
+        scale -= 0.1;
+        if (scale < minScale) scale = minScale;
+      }
+      modalImg.style.transform = `scale(${scale})`;
+    });
+
+    // Close modal and reset zoom on clicking outside the image
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        modal.style.display = 'none';
+        scale = 1;
+        modalImg.style.transform = `scale(${scale})`;
+      }
+    });
+  </script>
+
+</body>
+</html>

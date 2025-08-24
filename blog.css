@@ -1,0 +1,252 @@
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 15px 20px;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-profile-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid white;
+  cursor: pointer;
+  user-select: none;
+}
+
+.nav-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.nav-btn {
+  color: white;
+  text-decoration: none;
+  padding: 8px 15px;
+  background-color: #555;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.nav-btn:hover {
+  background-color: #667eea;
+}
+
+/* Header */
+header {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.header-container h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+/* About / Services */
+.about {
+  background: #fff;
+  padding: 40px 20px;
+  margin-top: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  text-align: center;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.services-list {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  text-align: left;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  list-style-type: disc;
+  padding-left: 20px;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #444;
+}
+
+.services-list li {
+  margin-bottom: 10px;
+  transition: color 0.3s ease;
+  cursor: default;
+}
+
+.services-list li strong {
+  color: #764ba2;
+}
+
+.services-list li:hover {
+  color: #667eea;
+}
+
+/* Projects */
+.projects {
+  margin-top: 40px;
+  padding: 20px;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.projects h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.project-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.project-card {
+  background: white;
+  padding: 20px;
+  width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  cursor: default;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Blog Section */
+.blog-section {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #f3f3f3;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.blog-section h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.blog-slider {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 10px;
+}
+
+.blog-card {
+  flex: 0 0 300px;
+  background-color: white;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  scroll-snap-align: start;
+  position: relative;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.blog-card:hover {
+  transform: scale(1.05);
+}
+
+.blog-card .full-blog {
+  display: none;
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #444;
+}
+
+.blog-card:hover .full-blog {
+  display: block;
+}
+
+/* Footer */
+footer {
+  background-color: #222;
+  color: white;
+  padding: 30px 20px;
+  text-align: center;
+  margin-top: 60px;
+}
+
+footer a {
+  color: #8ab4f8;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Image Modal */
+.img-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.85);
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  padding: 20px;
+  cursor: zoom-out;
+}
+
+.modal-img {
+  max-width: 600px;
+  width: 100%;
+  height: auto;
+  border: 5px solid white;
+  border-radius: 10px;
+  box-shadow: 0 0 30px rgba(255,255,255,0.2);
+  transition: transform 0.3s ease;
+}
