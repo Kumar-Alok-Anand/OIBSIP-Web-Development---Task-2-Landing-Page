@@ -27,10 +27,6 @@ To design and develop a visually appealing and responsive **Landing Page** using
 - Footer with social media links or contact info
 - Clean and modern UI
 
-## 📸 Screenshots
-
-> *(You can add screenshots here later if you want)*
-
 ## 🚀 Live Demo
 
 👉 [Click here to view the live project](https://kumar-alok-anand.github.io/OIBSIP-Web-Development---Task-2-Landing-Page/)
