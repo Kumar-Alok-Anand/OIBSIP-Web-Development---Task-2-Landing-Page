@@ -1,4 +1,4 @@
-# OIBSIP Web Development - Task 1: Landing Page
+# OIBSIP Web Development - Task 2: Landing Page
 
 ## 📌 Objective
 
@@ -33,6 +33,6 @@ To design and develop a visually appealing and responsive **Landing Page** using
 
 ## 🚀 Live Demo
 
-👉 [Click here to view the live project](https://yourusername.github.io/OIBSIP_WebDevelopment_Task1)
+👉 [Click here to view the live project](https://yourusername.github.io/OIBSIP_WebDevelopment_Task2-Lending-page)
 
 
